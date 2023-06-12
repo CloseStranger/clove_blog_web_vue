@@ -1,0 +1,23 @@
+@prefixCls: welcome-page;
+@animationTime: 2s;
+.@{prefixCls} {
+  &-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  &-title {
+    position: relative;
+    animation: topIn linear @animationTime, opacityShow linear @animationTime;
+  }
+
+  &-start {
+    animation: opacityShow linear @animationTime;
+  }
+}
+

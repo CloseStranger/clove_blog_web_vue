@@ -1,5 +1,5 @@
 import SelfLayout from '../layout/index.vue';
-import WelcomePage from '../views/welcomePage/index.vue';
+import homeRoute from './homeRoute.js';
 
 const routes = [
   {
@@ -13,12 +13,12 @@ const routes = [
   {
     path: '/welcome',
     name: 'Welcome',
-    component: WelcomePage,
+    component: () => import('../views/welcomePage/index.vue'),
   },
   {
     path: '/',
     component: SelfLayout,
-    children: [],
+    children: [...homeRoute],
   },
 ];
 
