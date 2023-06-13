@@ -21,7 +21,10 @@ export default {
 
 <template>
   <div :class="configClsName('container')">
-    <h1 :class="configClsName('title')">Welcome</h1>
+    <div :class="configClsName('welcome-bar')">
+      <span :class="configClsName('title')">Welcome</span>
+      <span :class="configClsName('blog-user')">ZZA 的博客</span>
+    </div>
     <span :class="configClsName('start')" @click="handleTurnToHomePage"
       >Start Explore</span
     >

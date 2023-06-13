@@ -1,5 +1,5 @@
 @prefixCls: welcome-page;
-@animationTime: 2s;
+@animationTime: 1s;
 .@{prefixCls} {
   &-container {
     width: 100%;
@@ -9,11 +9,25 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    background-color: #00000050;
+  }
+
+  &-welcome-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 48px;
+    color: #ffffff;
   }
 
   &-title {
     position: relative;
     animation: topIn linear @animationTime, opacityShow linear @animationTime;
+  }
+
+  &-blog-user {
+    position: relative;
+    margin-left: 24px;
   }
 
   &-start {

@@ -14,6 +14,9 @@ const routes = [
     path: '/welcome',
     name: 'Welcome',
     component: () => import('../views/welcomePage/index.vue'),
+    meta: {
+      tabTitle: '欢迎',
+    },
   },
   {
     path: '/',

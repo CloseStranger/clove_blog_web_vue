@@ -6,4 +6,11 @@ const router = createRouter({
   routes,
 });
 
+router.beforeEach((to, from, next) => {
+  if (to.meta?.tabTitle) {
+    document.title = `${to.meta.tabTitle} - Clove Blog`;
+  }
+  next();
+});
+
 export default router;
