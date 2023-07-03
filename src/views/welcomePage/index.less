@@ -1,15 +1,37 @@
 @prefixCls: welcome-page;
+@OperationZIndex:2;
 @animationTime: 1s;
+
 .@{prefixCls} {
   &-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  &-mask{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00000050;
+    z-index: 1;
+  }
+
+  &-bg-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &-content{
+    position: absolute;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
-    background-color: #00000030;
+    z-index: 2;
   }
 
   &-top-bar {
@@ -22,7 +44,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-
     &-item {
       height: 60px;
       width: 120px;
@@ -91,7 +112,6 @@
     animation: opacityShow linear @animationTime;
   }
 }
-
 
 @media screen and (max-width: 500px) {
   .@{prefixCls} {
