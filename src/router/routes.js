@@ -1,25 +1,25 @@
-import SelfLayout from '../layout/index.vue';
-import homeRoute from './homeRoute.js';
+import SelfLayout from "../layout/index.vue";
+import homeRoute from "./homeRoute.js";
 
 const routes = [
   {
-    path: '/',
-    redirect: {name: 'Welcome'},
+    path: "/",
+    redirect: { name: "Welcome" },
   },
   {
-    path: '/:pathMatch(.*)*',
-    redirect: '/',
+    path: "/:pathMatch(.*)*",
+    redirect: "/",
   },
   {
-    path: '/welcome',
-    name: 'Welcome',
-    component: () => import('../views/welcomePage/index.vue'),
+    path: "/welcome",
+    name: "Welcome",
+    component: () => import("../views/welcomePage/index.vue"),
     meta: {
-      tabTitle: '欢迎',
+      tabTitle: "欢迎",
     },
   },
   {
-    path: '/',
+    path: "/",
     component: SelfLayout,
     children: [...homeRoute],
   },
