@@ -1,15 +1,15 @@
 import apis from "../../apis/index.js";
-import { toRefs } from "vue";
 const studyAreaFunc = (stateInfo) => {
   const { getArticleList } = apis();
-  const { state } = stateInfo;
-  const stateAsRefs = toRefs(state);
-  const { articleList } = stateAsRefs;
+  const { stateAsRefs } = stateInfo;
+  const { articleList, loading } = stateAsRefs;
 
   const fetchArticleList = async () => {
+    loading.value = true;
     const { data } = await getArticleList();
     articleList.value = data;
     console.log(data);
+    loading.value = false;
   };
 
   return { fetchArticleList };
