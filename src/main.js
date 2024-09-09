@@ -6,3 +6,4 @@ import "view-ui-plus/dist/styles/viewuiplus.css";
 import router from "./router/index.js";
 
 createApp(App).use(router).use(ViewUIPlus).mount("#app");
+  
