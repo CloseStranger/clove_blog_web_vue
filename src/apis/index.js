@@ -1,6 +1,6 @@
 import unitRequests from "./axios.js";
 
-const apis = () => {
+const useApis = () => {
   const { getRequest } = unitRequests();
 
   const getArticleList = () => {
@@ -12,4 +12,4 @@ const apis = () => {
   };
 };
 
-export default apis;
+export default useApis;
